@@ -5,7 +5,8 @@
   background-position: center;
   color: white;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .card-user {
   position: absolute;
@@ -26,8 +27,20 @@
   bottom: 10px;
   left: 10px;
 }
+
+.card-description a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.card-description a:hover {
+  opacity: 1;
+}
+
 .card-description h2 {
   font-size: 24px;
+  color: white;
 }
 .card-description p {
   font-size: 14px;

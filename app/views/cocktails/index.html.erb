@@ -1,6 +1,8 @@
+<%= render "/cocktails/banner" %>
 <div class="container">
 <h1>Cocktails</h1>
-<p><%= link_to "Create a new cocktail", new_cocktail_path(@cocktail)  %></p>
+<button class="btn btn-primary">  <%= link_to "Create a new cocktail", new_cocktail_path(@cocktail), {:style=>'color:#FFFFFF; text-decoration: none', :class => "css_class"}  %>
+</button>
   <div class="row">
     <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-6 col-lg-4">
