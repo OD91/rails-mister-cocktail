@@ -3,6 +3,7 @@
 
 <h2>Ingredients:</h2>
 <% @cocktail.doses.each do |dose| %>
+
   <h4><%= dose.description %> of <%= dose.ingredient.name %></h4>
 <% end %>
 

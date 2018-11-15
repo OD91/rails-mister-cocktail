@@ -1,6 +1,6 @@
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name, label: 'Name of Cocktail please', error: 'Name of Cocktail is mandatory' %>
-
+  <%= f.input :picture_url, label: "Link a pic here" %>
 
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
