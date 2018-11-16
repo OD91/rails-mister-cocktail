@@ -1,5 +1,6 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description, label: 'Description', error: 'description of dose is mandatory' %>
-  <%= f.association :ingredient, label: "Ingredients", error: 'description of dose is mandatory' %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
+  <h1 class="text-center">Add doses</h1>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description, label: 'Description', error: 'description of dose is mandatory' %>
+    <%= f.association :ingredient, label: "Ingredients", error: 'description of dose is mandatory' %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
