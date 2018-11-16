@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # POST "cocktails"      #create
   # GET "cocktails/42"    #show
   root to: "cocktails#index"
-  resources :cocktails, only: [:index, :new, :create, :show] do
+  resources :cocktails, only: [:index, :new, :create, :show, :destroy] do
     resources :doses, only: [:new, :create, :destroy]
   end
 

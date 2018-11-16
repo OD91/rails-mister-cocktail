@@ -1,20 +1,37 @@
+  <div class="banner" style="background-image: url(<%= @cocktail.picture_url %>); height: 50vh; background-position: center;">
+    <div class="banner-content">
+      <h1><%= @cocktail.name %></h1>
+    </div>
+  </div>
+
+
 <div class="container">
-  <div class="card-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= @cocktail.picture_url %>);"> <h1 class="text-center"><%= @cocktail.name %></h1>
-   </div>
 
    <div class="row">
     <div class="col-sm-6">
+      <div style="background-color: white; padding: 30px; margin-top: 10px;">
       <h2>Ingredients:</h2>
       <% @cocktail.doses.each do |dose| %>
 
-      <h4><%= dose.description %> of <%= dose.ingredient.name %></h4>
+        <h4><%= dose.description %> of <%= dose.ingredient.name %>
+          <%= link_to "🗑", cocktail_dose_path(@cocktail, dose),
+            method: :delete,
+            data: {confirm: "Are you sure yo wanna delete this dose?"}  %>
+        </h4>
       <% end %>
 
       <p> <%= link_to "Back to cocktails", "/cocktails"  %></p>
+      <p> <%= link_to "Delete Cocktail", cocktail_path(@cocktail),  method: :delete,
+          data: {confirm: "Are you sure yo wanna delete this cocktail?"} %>
+      </p>
       </div>
-      <!-- <p><%= link_to "Create new dose", new_cocktail_dose_path(@cocktail)%></p> -->
+      </div>
+
       <div class="col-sm-6">
-      <%= render "doses/form" %>
+
+        <div style="background-color: white; padding: 30px; margin-top: 10px;">
+          <%= render "doses/form" %>
+        </div>
       </div>
   </div>
 </div>
