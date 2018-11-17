@@ -1,6 +1,7 @@
   <div class="banner" style="background-image: url(<%= @cocktail.picture_url %>); height: 50vh; background-position: center;">
     <div class="banner-content">
       <h1><%= @cocktail.name %></h1>
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
     </div>
   </div>
 
