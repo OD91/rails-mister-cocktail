@@ -1,6 +1,7 @@
   <div class="banner" style="background-image: url(<%= @cocktail.photo %>); height: 50vh; background-position: center;">
     <div class="banner-content">
       <h1><%= @cocktail.name %></h1>
+      <!-- the line above with the cl_image_tag  I just need if I directly wanna edit the picture -->
     <!--   <%= cl_image_tag @cocktail.photo, :width=>350, :fetch_format=>:auto, :crop=>"scale" %> -->
     </div>
   </div>
@@ -12,8 +13,8 @@
     <div class="col-sm-6">
       <div style="background-color: white; padding: 30px; margin-top: 10px;">
       <h2>Ingredients:</h2>
-      <% @cocktail.doses.each do |dose| %>
 
+      <% @cocktail.doses.each do |dose| %>
         <h4><%= dose.description %> of <%= dose.ingredient.name %>
           <%= link_to "🗑", cocktail_dose_path(@cocktail, dose),
             method: :delete,

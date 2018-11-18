@@ -1,4 +1,4 @@
-<div class="navbar-wagon">
+<div class="navbar-wagon navbar-fixed-top">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "https://delicatepink.de/delicatepink-wp/wp-content/uploads/2017/08/160051-bar-cocktail-cocktailbar-logo-delicatepink.jpg", height: 50 %>
@@ -9,7 +9,6 @@
 
     <!-- Links -->
     <%= link_to "Create a new cocktail", new_cocktail_path(@cocktail), class: "navbar-wagon-item navbar-wagon-link" %>
-
 
     <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">

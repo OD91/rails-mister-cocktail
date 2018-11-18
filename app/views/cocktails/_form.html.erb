@@ -3,10 +3,10 @@
 
   <div class="col-sm-offset-3 col-sm-6">
     <%= simple_form_for(@cocktail) do |f| %>
-    <%= f.input :name, label: 'Name of Cocktail please', error: 'Name of Cocktail is mandatory' %>
-    <%= f.input :picture_url, label: "Link a pic here" %>
+    <%= f.input :name, label: 'What is the name of your cocktail?', error: 'Name of Cocktail is mandatory' %>
+   <!--  <%= f.input :picture_url, label: "Link a pic here" %> -->
 
-    <%= f.input :photo %>
+    <%= f.input :photo, label: 'Please upload a nice photo of your cocktail', error: 'Photo of Cocktail is mandatory'  %>
     <%= f.input :photo_cache, as: :hidden %>
 
     <%= f.button :submit, class: "btn btn-primary" %>
